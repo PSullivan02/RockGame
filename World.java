@@ -10,7 +10,7 @@ import java.util.TimerTask;
 import javax.swing.JPanel;
 
 public class World extends JPanel{
-    
+    Base b;
     Timer timer;
     private ArrayList<Rock> rocks = new ArrayList<>();
     private ArrayList<Entity> entities = new ArrayList<>();
@@ -19,6 +19,7 @@ public class World extends JPanel{
         timer = new Timer();
         timer.scheduleAtFixedRate(new ScheduleTask(), 100, 1000/60);
         super.setSize(800, 600);
+        Base b = new Base(800, 600);
         for (int i = 0; i < 23; i++) {
             int x = (int) (Math.random() * 800 / 2);
             int y = (int) (Math.random() * 600);
@@ -31,12 +32,14 @@ public class World extends JPanel{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.setBackground(Color.BLACK);
+        g.drawImage(b.img, 0, 81, null);
     }
     
     private class ScheduleTask extends TimerTask {
         @Override
         public void run() {
             repaint();
+            b.update();
         }
         
     }
