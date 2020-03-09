@@ -17,8 +17,8 @@ public abstract class Entity{
         this.speed = speed;
         this.x = x;
         this.y = y;
-        this.vx = (int) (Math.random() * this.speed * 2 - this.speed);
-        this.vy = (int) (Math.random() * this.speed * 2 - this.speed);
+        this.vx = vx;
+        this.vy = vy;
         this.width = width;
         this.height = height;
         this.color = color;

@@ -10,7 +10,7 @@ public class Rock extends Entity{
     private static final int HEIGHT = 5;
     private static final int SPEED = 0;
     
-    public Rock(int x, int y){
+    public Rock(int x, int y, int vy){
         super(SPEED, x, y, WIDTH, HEIGHT, COLOR);
         COLOR = Color.LIGHT_GRAY;
     }
