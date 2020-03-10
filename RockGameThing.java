@@ -3,10 +3,12 @@ package rockgamething;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
+import java.util.Scanner;
 
 public class RockGameThing extends JFrame{
-    
+        
         public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
         JFrame j = new RockGameThing();
         World c = new World();
         j.add(c);
